@@ -1,0 +1,62 @@
+<div class="row">
+  <center><h1> Survey Report </h1></center>
+  </div><br><br>
+
+  <div class="row">
+    <b>1. Overall, how would you rate the course ?</b><br>
+<%= pie_chart(answers_rate) %>
+  <!-- <canvas id="chart"></canvas> -->
+  </div><br><br>
+
+  <div class="row">
+    <b>2. How useful were the course materials (readings,textbooks,etc)?</b><br>
+<%= pie_chart(answers_usefulness) %>
+  </div><br><br>
+
+  <div class="row">
+    <b>3. How clearly did your instructor explain the course material?</b><br>
+<%= pie_chart(answers_clarity) %>
+  </div><br><br>
+
+  <div class="row">
+    <b>4. Was the speed with which your instructor presented the course material too fast, too slow, or about right?</b><br>
+<%= pie_chart(answers_speed) %>
+  </div><br><br>
+
+  <div class="row">
+    <b>5. How well did your instructor answer students' questions?</b><br>
+<%= pie_chart(answers_answered) %>
+  </div><br><br>
+
+  <div class="row">
+    <b>6. How comfortable did you feel voicing your opinions in class?</b><br>
+<%= pie_chart(answers_how_comfortable) %>
+  </div><br><br>
+
+  <div class="row">
+    <b>7. How helpful were the homework assignements to your understanding of the material?</b><br>
+<%= pie_chart(answers_assignements) %>
+  </div><br><br>
+
+  <div class="row">
+    <b>8. What improvements would you make to the course? (200 Characters Max)</b><br>
+  </div><br><br>
+
+  <div class="row">
+  <table class="table table-striped" border="0" cellspacing="5" cellpadding="5">
+  <tr>
+  <% answers_improvements.headers.each do |header| %>
+    <th><%= header unless header != "improvements" %></th>
+  <% end %>
+  </tr>
+  <% answers_improvements.each do |row| %>
+    <tr>
+      <% if row[0] != nil then %>
+        <% row.each do |element| %>
+          <td><%= element[1] unless element[0] != "improvements"  %></td>
+        <% end %>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+</div><br><br>

@@ -1,0 +1,80 @@
+<% if cookies_has_already_been_set %>
+  <div class="alert alert-danger" role="alert">
+    You already submitted the survey !
+  </div>
+<% end %>
+
+<form class="row g-3" id="form_survey" autocomplete="off" method="post" action="/form">
+    <div class="col-12">
+    <h1>Course Evaluation</h1>
+    </div>
+    <div class="col-12">
+    <h4>Please fill out all parts of the survey</h4><br>
+    </div>
+    <div class="col-6">
+    <input type="text" class="form-control" half placeholder="Name" autocomplete="no" name="user_name" value="" required>
+    </div>
+    <div class="col-6">
+    <input type="email" class="form-control" half placeholder="Email" autocomplete="no" name="email" value="" required><br><br></div>
+
+    <div class="col-12">
+    <label for="question1"><b>1. Overall, how would you rate the course ?</b></label><br><br>
+      <input type="radio" name="rate" value=5 required>  Excellent <br>
+      <input type="radio" name="rate" value=4 required>  Very good <br>
+      <input type="radio" name="rate" value=3 required>  Good <br>
+      <input type="radio" name="rate" value=2 required>  Fair<br>
+      <input type="radio" name="rate" value=1 required>  Poor<br><br></div>
+
+      <div class="col-12">
+      <label for="question2"><b>2. How useful were the course materials (readings,textbooks,etc)?</b></label><br><br>
+      <input type="radio" name="usefulness" value=5 required>  Extremely useful <br>
+      <input type="radio" name="usefulness" value=4 required>  Very useful <br>
+      <input type="radio" name="usefulness" value=3 required>  Somewhat useful <br>
+      <input type="radio" name="usefulness" value=2 required>  Not so useful<br>
+      <input type="radio" name="usefulness" value=1 required>  Not at all useful<br><br></div>
+
+      <div class="col-12">
+      <label for="question3"><b>3. How clearly did your instructor explain the course material?</b></label><br><br>
+      <input type="radio" name="clarity" value=5 required>  Extremely clearly <br>
+      <input type="radio" name="clarity" value=4 required>  Very clearly <br>
+      <input type="radio" name="clarity" value=3 required>  Somewhat clearly <br>
+      <input type="radio" name="clarity" value=2 required>  Not so clearly<br>
+      <input type="radio" name="clarity" value=1 required>  Not at all clearly<br><br></div>
+
+      <div class="col-12">
+      <label for="question4"><b>4. Was the speed with which your instructor presented the course material too fast, too slow, or about right?</b></label><br><br>
+      <input type="radio" name="speed" value=5 required>  Much too fast <br>
+      <input type="radio" name="speed" value=4 required>  Too fast <br>
+      <input type="radio" name="speed" value=3 required>  The right amount <br>
+      <input type="radio" name="speed" value=2 required>  Too slow<br>
+      <input type="radio" name="speed" value=1 required>  Much too slow<br><br></div>
+
+      <div class="col-12">
+      <label for="question5"><b>5. How well did your instructor answer students' questions?</b></label><br><br>
+      <input type="radio" name="answered" value=5 required>  Extremely well <br>
+      <input type="radio" name="answered" value=4 required>  Very well <br>
+      <input type="radio" name="answered" value=3 required>  Somewhat well <br>
+      <input type="radio" name="answered" value=2 required>  Not so well<br>
+      <input type="radio" name="answered" value=1 required>  Not at all well<br><br></div>
+
+      <div class="col-12">
+      <label for="question6"><b>6. How comfortable did you feel voicing your opinions in class?</b></label><br><br>
+      <input type="radio" name="how_comfortable" value=5 required>   Extremely comfortable <br>
+      <input type="radio" name="how_comfortable" value=4 required>   Very comfortable <br>
+      <input type="radio" name="how_comfortable" value=3 required>   Somewhat comfortable <br>
+      <input type="radio" name="how_comfortable" value=2 required>  Not so comfortable<br>
+      <input type="radio" name="how_comfortable" value=1 required>  Not at all comfortable<br><br></div>
+
+      <div class="col-12">
+      <label for="question7"><b>7. How helpful were the homework assignements to your understanding of the material?</b></label><br><br>
+      <input type="radio" name="assignements" value=5 required>  Extremely helpful <br>
+      <input type="radio" name="assignements" value=4 required>  Very helpful <br>
+      <input type="radio" name="assignements" value=3 required>  Somewhat helpful <br>
+      <input type="radio" name="assignements" value=2 required>  Not so helpful<br>
+      <input type="radio" name="assignements" value=1 required>  Not at all helpful<br><br></div>
+
+      <div class="col-12">
+      <label for="question8"><b>8. What improvements would you make to the course? (200 Characters Max)</b></label><br><br>
+      <textarea name="improvements" maxlength = "200" id = "improvements_text" required></textarea><br><br></div>
+    <input type="submit" value="Submit">
+</form>
